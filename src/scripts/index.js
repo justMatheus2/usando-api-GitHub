@@ -1,5 +1,8 @@
+import { baseUrl, repositoriesQuantity } from '/src/scripts/variables.js'
+
 document.getElementById('btn-search').addEventListener('click', () => {
     const userName = document.getElementById('input-search').value
+    if(validateEmptyInput(userName)) return
     getUserProfile(userName)
 })
 
@@ -9,17 +12,25 @@ document.getElementById('input-search').addEventListener('keyup', (e) => {
     const isEnterKeyPressed = key === 13
 
     if(isEnterKeyPressed){
+        if(validateEmptyInput(userName)) return
         getUserProfile(userName)
     }
 })
 
+function validateEmptyInput (userName){
+    if(userName.length === 0){
+        alert('fill the field with the user name')
+        return true
+    }
+}
+
 async function user(userName) {
-    const response = await fetch(`https://api.github.com/users/${userName}`)
+    const response = await fetch(`${baseUrl}/${userName}`)
     return await response.json()
 }
 
 async function repos(userName) {
-    const response = await fetch(`https://api.github.com/users/${userName}/repos?per_page=10`)
+    const response = await fetch(`${baseUrl}/${userName}/repos?per_page=${repositoriesQuantity}`)
     return await response.json()
 }
 

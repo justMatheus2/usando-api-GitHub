@@ -121,7 +121,21 @@ main {
   line-height: 23px;
 }
 
-/* REPOSITORIES */
+.container .profile-data .info .stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    
+}
+
+.container .profile-data .info .stats p {
+    background-color: grey;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
 
 .container .profile-data .repositories h2{
   margin-bottom: 30px;
@@ -150,6 +164,58 @@ main {
 
 .container .profile-data.hide{
   display: none;
+}
+
+
+.events {
+    margin-top: 30px;
+}
+
+.events h2 {
+    margin-bottom: 20px;
+    color: #242676;
+}
+
+.events-list {
+    list-style: none;
+    padding: 0;
+}
+
+.event-item {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #242676;
+}
+
+.event-type {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 10px;
+    color: white;
+}
+
+.push-event {
+    background-color: #28a745;
+}
+
+.create-event {
+    background-color: #6f42c1;
+}
+
+.event-repo {
+    font-weight: bold;
+    color: #242676;
+}
+
+.event-message {
+    margin: 8px 0 0;
+    color: #555;
+    font-size: 14px;
 }
 
 @media (max-width: 1280px) {

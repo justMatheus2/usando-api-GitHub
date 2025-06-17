@@ -35,8 +35,8 @@ main {
 }
 
 .container {
-  width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
-  max-width: 960px; /* quando chegar em 980px para de aumentar */
+  width: 60%;
+  max-width: 960px; 
   box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
   background-color: #fff;
   display: flex;
@@ -137,33 +137,58 @@ main {
 }
 
 
-.container .profile-data .repositories h2{
-  margin-bottom: 30px;
-  text-align: center;
+.repo-list {
+    list-style: none;
+    padding: 0;
 }
 
-.container .profile-data .repositories ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.repo-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #242676;
 }
 
-.container .profile-data .repositories ul li a{
-  padding: 20px;
-  border: 1px solid grey;  
-  margin: 20px;
-  display: block;
-  border-radius: 7px;
-  transition: 0.3s ease-in-out;
+.repo-item a {
+    font-weight: bold;
+    color: #242676;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-.container .profile-data .repositories ul li a:hover{
-  background-color:hotpink;
-  color: #fff
+.repo-item a:hover {
+    text-decoration: underline;
 }
 
-.container .profile-data.hide{
-  display: none;
+.repo-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.repo-stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+.repo-lang {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.lang-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 
